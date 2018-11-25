@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html> 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="title" content="真人语音">
+<meta name="apple-touch-fullscreen" content="YES">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+
+<title>真人语音</title>
+<link rel="stylesheet" href="css/index.css" />
+<script type="text/javascript" src="js/jqmobi.js"></script>	
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<section id="menu">
+		<ul class="menu_tagList">
+			<li id="newSong" class="menu_hover">在线试听列表</li>
+		
+		</ul>
+		
+	</section>
+	<section id="content" >		
+	</section>	
+	<section id="playwrap">
+		<div id="playContent">
+			<div >
+				<audio  id="myMusic"></audio>
+			</div>
+			<div onClick="myControl.selectTime(event)" id="progressWrap">
+				<div id="progress"></div>
+			</div>
+			<div class="img">
+				<img id="singerHead" src="data/cr.jpg">
+			</div>
+			<div class="info">
+				<div class="songname clearfix">
+					<label id="musicTitle" for="musicTitle"></label>
+					<label style="display: none;" id="songname" for="songname" style="color: rgb(204, 0, 0);">此手机不支持html5播放</label>
+					<label id="timeshow" for="time"><span id="currentTime">00:00</span>/<span id="totleTime">00:00</span></label>
+				</div>
+				<div class="audioControl">
+					<a id="prevButton" class="last" onClick="myControl.prev()" href="javascript:;"></a>
+					<a id="playButton" class="play" onClick="myControl.mainControl()" href="javascript:;"></a>
+					<a id="nextButton" class="next" onClick="myControl.next()" href="javascript:;"></a>
+					<!-- <a id="modeButton" class="mode-default" onClick="myControl.selectMode()" href="javascript:;"></a> -->
+					<a class="border"></a>
+					<a id="playDetail" class="showDetail" href="javascript:;"></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class='go-top'>
+		<svg t="1543122983807" fill="#fff" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1089" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"><defs><style type="text/css"></style></defs><path d="M796.422846 524.478323 537.312727 265.185862c-6.368176-6.39914-14.688778-9.471415-22.976697-9.407768-1.119849-0.096331-2.07972-0.639914-3.19957-0.639914-4.67206 0-9.024163 1.087166-13.023626 2.879613-4.032146 1.536138-7.87163 3.872168-11.136568 7.135385L227.647682 524.27706c-12.512727 12.480043-12.54369 32.735385-0.032684 45.248112 6.239161 6.271845 14.432469 9.407768 22.65674 9.407768 8.191587 0 16.352211-3.135923 22.624056-9.34412L479.1356 363.426421l0 563.712619c0 17.695686 14.336138 31.99914 32.00086 31.99914s32.00086-14.303454 32.00086-31.99914L543.13732 361.8576l207.91012 207.73982c6.240882 6.271845 14.496116 9.440452 22.687703 9.440452s16.319527-3.103239 22.560409-9.311437C808.870206 557.277355 808.902889 536.989329 796.422846 524.478323z" p-id="1090"></path><path d="M864.00258 192 160.00258 192c-17.664722 0-32.00086-14.336138-32.00086-32.00086S142.337858 128 160.00258 128l704 0c17.695686 0 31.99914 14.336138 31.99914 32.00086S881.698266 192 864.00258 192z" p-id="1091"></path>
+		</svg>
+	</div>
+	<div style="display:none;" id="oWindow"></div>
+	<script type="text/javascript" src="js/all.js"></script>
+</body>
+</html>
